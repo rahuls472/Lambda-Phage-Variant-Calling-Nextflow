@@ -1,0 +1,15 @@
+work/
+results/
+.nextflow*
+.cache/
+
+*.sam
+*.bam
+*.bai
+*.vcf.gz
+*.vcf.gz.tbi
+
+#*.html
+*.zip
+
+*.log
