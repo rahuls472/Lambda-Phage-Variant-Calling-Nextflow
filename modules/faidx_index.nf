@@ -2,7 +2,7 @@
 
 process FAIDX{
     container "biocontainers/samtools:v1.9-4-deb_cv1"
-    publishDir "results/reference", mode: 'copy'
+    publishDir "${params.output}/reference", mode: 'copy'
 
     input:
     path fasta

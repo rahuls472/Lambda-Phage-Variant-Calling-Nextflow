@@ -14,10 +14,13 @@ include { SAMTOOL_SORT } from './modules/samtool_sort'
 include { BAM_INDEX } from './modules/samtools_index'
 include { MARKDUPLICATE } from './modules/markduplicate'
 include { HAPLOTYPECALLER } from './modules/Haplotypecaller'
+include { REFASTQC } from './modules/re_eva'
+
+params.output = "results"
 
 workflow {
 
-    reference_ch = Channel.fromPath(params.input)
+    reference_ch = Channel.fromPath(params.reference)
 
     indexed_reference_ch = INDEX(reference_ch)
     faidx_ch            = FAIDX(reference_ch)
@@ -39,13 +42,13 @@ workflow {
         }
 
     reads_ch = Channel
-    .fromFilePairs(params.input_fastq)
-    reads_ch.subscribe { println it.getClass()
-                     println it
-    }   
+    .fromFilePairs(params.input)
+    
     FASTQC(reads_ch)
 
     fastp_ch = FASTP(reads_ch)
+
+    REFASTQC(fastp_ch)
 
     aligned_ch = ALIGNMENT(
         fastp_ch,

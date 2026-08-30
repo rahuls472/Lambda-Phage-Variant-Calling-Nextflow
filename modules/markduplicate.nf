@@ -4,7 +4,7 @@ process MARKDUPLICATE {
 
     container "broadinstitute/gatk"
 
-    publishDir "results/markduplicate", mode: 'copy'
+    publishDir "${params.output}/markduplicate", mode: 'copy'
 
     input:
     path bam

@@ -2,7 +2,7 @@ process ALIGNMENT {
 
     container 'quay.io/biocontainers/bwa:0.7.19--h577a1d6_1'
 
-    publishDir "results/alignment", mode: 'copy'
+    publishDir "${params.output}/alignment", mode: 'copy'
 
     input:
     tuple val(sample_id), path(r1), path(r2)

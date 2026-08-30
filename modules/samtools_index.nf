@@ -4,7 +4,7 @@ process BAM_INDEX {
 
     container "biocontainers/samtools:v1.9-4-deb_cv1"
 
-    publishDir "results/samtools_index", mode: 'copy'
+    publishDir "${params.output}/samtools_index", mode: 'copy'
 
     input:
     path bam

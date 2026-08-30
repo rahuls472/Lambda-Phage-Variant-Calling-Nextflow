@@ -2,7 +2,7 @@
 
 process FILE_CONVERSION {
     container "biocontainers/samtools:v1.9-4-deb_cv1"
-    publishDir "results/sam_to_bam_conversion", mode: 'copy'
+    publishDir "${params.output}/sam_to_bam_conversion", mode: 'copy'
 
     input:
     path sam

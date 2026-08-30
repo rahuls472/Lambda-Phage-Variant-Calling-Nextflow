@@ -1,6 +1,0 @@
-task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
-4	d8/ab85a9	154354	FASTP (1)	FAILED	1	2026-07-01 10:25:25.291	703ms	610ms	-	-	-	-	-
-1	61/d6edf4	154434	FAIDX (1)	FAILED	1	2026-07-01 10:25:25.392	777ms	710ms	-	-	-	-	-
-2	68/60ed0e	154373	INDEX (1)	COMPLETED	0	2026-07-01 10:25:25.332	915ms	0ms	33.3%	3 MB	4.3 MB	265.7 KB	131.2 KB
-5	0d/19c5ad	154332	FASTQC (1)	ABORTED	-	2026-07-01 10:25:25.255	-	-	-	-	-	-	-
-3	06/11849b	154927	DICT_MAKING (1)	ABORTED	-	2026-07-01 10:25:26.013	-	-	-	-	-	-	-

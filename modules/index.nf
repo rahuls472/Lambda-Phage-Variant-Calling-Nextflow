@@ -4,7 +4,7 @@ process INDEX {
 
     container 'quay.io/biocontainers/bwa:0.7.19--h577a1d6_1'
 
-    publishDir "results/reference", mode: 'copy'
+    publishDir "${params.output}/reference", mode: 'copy'
 
     input:
     path fasta

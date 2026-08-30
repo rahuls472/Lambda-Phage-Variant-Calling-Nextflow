@@ -2,7 +2,7 @@
 
 process DICT_MAKING{
     container "broadinstitute/gatk"
-    publishDir "results/reference", mode: 'copy'
+    publishDir "${params.output}/reference", mode: 'copy'
 
     input:
     path fasta

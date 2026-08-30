@@ -4,7 +4,7 @@ process HAPLOTYPECALLER {
 
     container "broadinstitute/gatk"
 
-    publishDir "results/haplotypecaller", mode: 'copy'
+    publishDir "${params.output}/haplotypecaller", mode: 'copy'
 
     input:
 
